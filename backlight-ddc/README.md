@@ -26,11 +26,13 @@ signal=13
 
 - `xorg-xset`
 - `ddcci-driver-linux-dkms`
+- `ddcutil`
 
 For example: ArchLinux
 
 ```sh
 pacman -S xorg-xset
 pacman -S ddcci-driver-linux-dkms   # reboot after install
+pacman -S ddcutil
 lsmod | grep -i 'i2c'   # Check if the i2c module is loaded in the kernel
 ```
