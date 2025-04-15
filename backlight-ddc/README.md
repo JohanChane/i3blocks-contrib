@@ -22,6 +22,13 @@ signal=13
 - right click: turn off backlight
 - scroll: increase/decrease the brightness in percentage steps according to `STEP`
 
+Add current user to `i2c` group:
+
+```sh
+sudo usermod -aG i2c $USER  # Relogin required after this command
+groups  # Verify group membership changes
+```
+
 ## Dependencies
 
 - `xorg-xset`
