@@ -29,17 +29,27 @@ sudo usermod -aG i2c $USER  # Relogin required after this command
 groups  # Verify group membership changes
 ```
 
+Check the capabilities:
+
+```sh
+ddcutil capabilities | grep "Feature: 10"
+```
+
+Detect:
+
+```sh
+ddcutil detect
+```
+
 ## Dependencies
 
 - `xorg-xset`
-- `ddcci-driver-linux-dkms`
 - `ddcutil`
 
 For example: ArchLinux
 
 ```sh
 pacman -S xorg-xset
-pacman -S ddcci-driver-linux-dkms   # reboot after install
 pacman -S ddcutil
 lsmod | grep -i 'i2c'   # Check if the i2c module is loaded in the kernel
 ```
