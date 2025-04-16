@@ -41,6 +41,14 @@ Detect:
 ddcutil detect
 ```
 
+i3wm config:
+
+```conf
+set $refresh_i3blocks_backlight pkill -RTMIN+13 i3blocks
+bindsym $mod+Ctrl+Prior exec --no-startup-id ddcutil setvcp 10 + 1 && $refresh_i3blocks_backlight
+bindsym $mod+Ctrl+Next exec --no-startup-id ddcutil setvcp 10 - 1 && $refresh_i3blocks_backlight
+```
+
 ## Dependencies
 
 - `xorg-xset`
